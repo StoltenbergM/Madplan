@@ -98,7 +98,8 @@ function resolve(rule: FodmapRule, text: string, profile: Profile): Omit<Match, 
  * ingrediensliste ("hvedemel, vand, løgpulver …").
  */
 export function checkIngredient(text: string, profile: Profile = FRUCTAN_PROFILE): IngredientResult {
-  const normalized = text.normalize("NFC").toLowerCase();
+  // "bouillon uden løg og hvidløg" må ikke matche løg/hvidløg.
+  const normalized = text.normalize("NFC").toLowerCase().replace(/\buden\b[^,;()]*/g, "");
   const matches: Match[] = [];
   for (const c of pickLongest(findCandidates(normalized))) {
     if (matches.some((m) => m.rule.id === c.rule.id)) continue;

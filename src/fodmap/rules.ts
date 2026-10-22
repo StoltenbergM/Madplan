@@ -398,9 +398,10 @@ export const RULES: FodmapRule[] = [
     types: ["lactose"],
     exceptions: [LACTOSE_FREE],
   },
-  low("ost", "Fast ost", ["ost", "cheddar", "parmesan", "mozzarella", "feta", "havarti", "danbo", "pecorino", "gruyère"]),
+  low("ost", "Fast ost", ["ost", "cheddar", "parmesan", "mozzarella", "feta", "havarti", "danbo", "pecorino", "gruyère", "halloumi"]),
 
   // --- Skjult løg/hvidløg/hvede: læs ingredienslisten ---
+  low("lavfodmap-bouillon", "Lav-FODMAP bouillon", ["lav-fodmap bouillon", "lav-fodmap fond"]),
   {
     id: "bouillon",
     name: "Bouillon / fond",
@@ -453,7 +454,7 @@ export const RULES: FodmapRule[] = [
   low("fisk", "Fisk og skaldyr", ["laks", "torsk", "sej", "rødspætte", "makrel", "tun", "rejer", "muslinger", "sild", "fisk", "kuller", "ørred"]),
   low("aeg", "Æg", ["æg"]),
   low("tofu", "Fast tofu", ["tofu", "fast tofu", "tempeh"]),
-  low("ris", "Ris og glutenfrie kornsorter", ["ris", "basmatiris", "jasminris", "quinoa", "hirse", "boghvede", "polenta", "rismel", "majsstivelse", "maizena", "majsmel", "kartoffelmel", "popcorn", "rispapir", "rismælk", "risdrik"]),
+  low("ris", "Ris og glutenfrie kornsorter", ["ris", "basmatiris", "jasminris", "quinoa", "hirse", "boghvede", "polenta", "rismel", "majsstivelse", "maizena", "majsmel", "kartoffelmel", "popcorn", "rispapir", "rismælk", "risdrik", "majstortilla"]),
   low("kartofler", "Kartofler", ["kartofler", "kartoffel"]),
   low("groent", "Lav-FODMAP grøntsager", [
     "gulerod", "gulerødder", "agurk", "tomat", "peberfrugt", "squash", "aubergine", "spinat", "salat",
@@ -462,7 +463,7 @@ export const RULES: FodmapRule[] = [
     "knoldselleri", "rabarber", "østershatte", "kapers",
   ]),
   low("frugt", "Lav-FODMAP frugt", ["appelsin", "mandarin", "klementin", "kiwi", "ananas", "jordbær", "blåbær", "hindbær", "vindruer", "citron", "lime", "passionsfrugt", "papaya", "cantaloupe"]),
-  low("urter", "Krydderurter og krydderier", ["persille", "basilikum", "koriander", "timian", "rosmarin", "oregano", "dild", "mynte", "spidskommen", "paprika", "gurkemeje", "kanel", "peber", "salt", "laurbærblad", "muskat", "estragon"]),
+  low("urter", "Krydderurter og krydderier", ["persille", "basilikum", "koriander", "timian", "rosmarin", "oregano", "dild", "mynte", "spidskommen", "paprika", "gurkemeje", "kanel", "peber", "salt", "laurbærblad", "muskat", "estragon", "garam masala", "chiliflager"]),
   low("fedt", "Olie og fedt", ["olie", "olivenolie", "rapsolie", "smør", "margarine"]),
-  low("andet", "Øvrige lave varer", ["sojasauce", "tamari", "fiskesauce", "eddike", "sennep", "ahornsirup", "sukker", "peanutbutter", "peanutsmør", "jordnødder", "peanuts", "valnødder", "macadamia", "pekannødder", "pinjekerner", "chokolade", "kakao", "tomatpuré", "hakkede tomater", "vand", "citronsaft"]),
+  low("andet", "Øvrige lave varer", ["sojasauce", "tamari", "fiskesauce", "eddike", "sennep", "ahornsirup", "sukker", "farin", "peanutbutter", "peanutsmør", "jordnødder", "peanuts", "valnødder", "macadamia", "pekannødder", "pinjekerner", "chokolade", "kakao", "tomatpuré", "hakkede tomater", "vand", "citronsaft", "sesam"]),
 ];

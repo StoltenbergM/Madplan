@@ -5,6 +5,9 @@
   "type": "module",
   "description": "Ugentlig lav-FODMAP madplan og indkøbsliste baseret på tilbud i danske supermarkeder",
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "test": "node --test",
     "typecheck": "tsc",
     "tjek": "node src/fodmap/cli.ts"
@@ -14,6 +17,13 @@
   },
   "devDependencies": {
     "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   }
 }

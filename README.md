@@ -5,11 +5,12 @@ Lav-FODMAP madplan og indkøbsliste ud fra ugens tilbud i danske supermarkeder (
 ## Status
 
 - [x] FODMAP-regler og tjek af ingredienser/retter (`src/fodmap/`)
-- [ ] Hentning af tilbud (én adapter pr. kæde)
-- [ ] Matchning af tilbudsvarer til ingredienser
-- [ ] Madplan via Claude, valideret af FODMAP-tjekket
-- [ ] Indkøbsliste (samlede mængder, pakkestørrelser, afdelinger, priser)
-- [ ] Web-app (Next.js, mobilvenlig)
+- [x] Bibliotek med 48 lav-FODMAP retter (`src/data/recipes/`): kylling, kød, fisk, skaldyr og vegetar
+- [x] Planlægning uden API (`src/plan/`): tilfældig plan, eller bygget op om varer man har eller har set på tilbud
+- [x] Indkøbsliste: samlede mængder, rundet op til pakker, delt op i afdelinger, med tilbud og "tjek etiket"
+- [x] Web-app der kan installeres på telefonen (Next.js, `app/`) og virker offline
+- [ ] Hentning af tilbud fra kæderne (kræver netværksadgang)
+- [ ] Hosting (fx Vercel)
 
 ## Kom i gang
 
@@ -17,10 +18,17 @@ Kræver Node 22.18+ (kører TypeScript direkte).
 
 ```sh
 npm install
+npm run dev        # http://localhost:3000
 npm test
 npm run tjek -- "2 fed hvidløg" "1 porre, kun den grønne del"
-npm run tjek -- --alle "200 g champignon"   # alle FODMAP-grupper, ikke kun fruktaner
 ```
+
+## Sådan virker planen
+
+- Retterne står i `src/data/recipes/*.ts` og bruger kun varer fra `src/data/ingredients.ts`.
+- `npm test` tjekker hver ret: alle ingredienser findes, retten er lav-FODMAP i alle grupper (ikke kun fruktaner), højst én vare med portionsgrænse, og kikærter og linser holder sig under Monash' grænser.
+- Varer man **har**, trækkes fra indkøbslisten. Varer på **tilbud** foretrækkes, men købes stadig.
+- Alt gemmes i browseren på telefonen. Der er ingen server og ingen konto.
 
 ## FODMAP-reglerne
 

@@ -46,6 +46,12 @@ test("kendte lave varer er lave, ukendte markeres", () => {
   assert.equal(status("quorn"), "unknown");
 });
 
+test("'uden …' tæller ikke som indhold", () => {
+  assert.equal(status("bouillon uden løg og hvidløg"), "check");
+  assert.equal(status("1 lav-FODMAP bouillonterning"), "low");
+  assert.equal(status("8 majstortillas"), "low");
+});
+
 test("skjulte kilder kræver tjek af ingredienslisten", () => {
   assert.equal(status("1 bouillonterning"), "check");
   assert.equal(status("400 g krydret hakket oksekød"), "check");
