@@ -1,0 +1,19 @@
+{
+  "name": "madplan",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Ugentlig lav-FODMAP madplan og indkøbsliste baseret på tilbud i danske supermarkeder",
+  "scripts": {
+    "test": "node --test",
+    "typecheck": "tsc",
+    "tjek": "node src/fodmap/cli.ts"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}
