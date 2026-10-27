@@ -460,10 +460,10 @@ export const RULES: FodmapRule[] = [
     "gulerod", "gulerødder", "agurk", "tomat", "peberfrugt", "squash", "aubergine", "spinat", "salat",
     "rucola", "grønne bønner", "haricots verts", "edamame", "bønnespirer", "pastinak", "broccoli",
     "hvidkål", "rødkål", "kinakål", "pak choi", "grønkål", "radise", "ingefær", "chili", "oliven",
-    "knoldselleri", "rabarber", "østershatte", "kapers",
+    "knoldselleri", "rabarber", "østershatte", "kapers", "citrongræs",
   ]),
   low("frugt", "Lav-FODMAP frugt", ["appelsin", "mandarin", "klementin", "kiwi", "ananas", "jordbær", "blåbær", "hindbær", "vindruer", "citron", "lime", "passionsfrugt", "papaya", "cantaloupe"]),
   low("urter", "Krydderurter og krydderier", ["persille", "basilikum", "koriander", "timian", "rosmarin", "oregano", "dild", "mynte", "spidskommen", "paprika", "gurkemeje", "kanel", "peber", "salt", "laurbærblad", "muskat", "estragon", "garam masala", "chiliflager"]),
   low("fedt", "Olie og fedt", ["olie", "olivenolie", "rapsolie", "smør", "margarine"]),
-  low("andet", "Øvrige lave varer", ["sojasauce", "tamari", "fiskesauce", "eddike", "sennep", "ahornsirup", "sukker", "farin", "peanutbutter", "peanutsmør", "jordnødder", "peanuts", "valnødder", "macadamia", "pekannødder", "pinjekerner", "chokolade", "kakao", "tomatpuré", "hakkede tomater", "vand", "citronsaft", "sesam"]),
+  low("andet", "Øvrige lave varer", ["sojasauce", "tamari", "fiskesauce", "eddike", "sennep", "ahornsirup", "sukker", "farin", "peanutbutter", "peanutsmør", "jordnødder", "peanuts", "valnødder", "macadamia", "pekannødder", "pinjekerner", "chokolade", "kakao", "tomatpuré", "hakkede tomater", "vand", "citronsaft", "sesam", "sovskulør", "hvidvin", "rødvin"]),
 ];

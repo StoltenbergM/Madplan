@@ -46,8 +46,6 @@ export const PROTEIN_LABEL: Record<Protein, string> = {
   okse: "Okse",
   svin: "Svin",
   lam: "Lam",
-  fisk: "Fisk",
-  skaldyr: "Skaldyr",
   vegetar: "Vegetar",
 };
 
@@ -83,7 +81,9 @@ export function useSaved(): [Saved, (update: (s: Saved) => Saved) => void, boole
       const raw = localStorage.getItem(STORAGE_KEY);
       if (raw) {
         const parsed = { ...DEFAULT_SAVED, ...JSON.parse(raw) } as Saved;
+        // Retter og proteiner kan være fjernet siden sidst (fx fisk).
         parsed.planIds = parsed.planIds.filter((id) => RECIPE_BY_ID.has(id));
+        parsed.settings.proteins = parsed.settings.proteins.filter((p) => p in PROTEIN_LABEL);
         setSaved(parsed);
       }
     } catch {

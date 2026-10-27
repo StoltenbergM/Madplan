@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Madplan – lav-FODMAP",
+    name: "Madplan – uden fruktaner",
     short_name: "Madplan",
-    description: "Ugeplan og indkøbsliste med lav-FODMAP retter",
+    description: "Ugeplan og indkøbsliste med retter uden fruktaner",
     lang: "da",
     start_url: "/",
     display: "standalone",

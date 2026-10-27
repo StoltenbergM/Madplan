@@ -114,7 +114,7 @@ export function Setup({ initial, onSubmit }: { initial: Settings; onSubmit: (s: 
     >
       <header className="page-head">
         <h1>Ny madplan</h1>
-        <p className="muted">{RECIPES.length} lav-FODMAP retter – uden løg, hvidløg, hvede og laktose.</p>
+        <p className="muted">{RECIPES.length} retter uden fruktaner – ingen hvidløg, kun lidt løg og gluten.</p>
       </header>
 
       <section className="card">

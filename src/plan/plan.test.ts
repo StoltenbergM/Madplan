@@ -22,10 +22,10 @@ const LIBRARY: Recipe[] = [
   recipe("kylling-karry", "kylling", [["kyllingeoverlaar", 700], ["kokosmaelk", 400], ["basmatiris", 300]]),
   recipe("kylling-ovn", "kylling", [["kyllingebryst", 700], ["kartofler", 1000], ["olivenolie", 2]]),
   recipe("kødsovs", "okse", [["hakket-oksekoed", 500], ["hakkede-tomater", 800], ["glutenfri-pasta", 400]]),
-  recipe("laks", "fisk", [["laks", 600], ["kartofler", 1000], ["dild", 1]]),
-  recipe("mørbrad", "svin", [["svinemoerbrad", 600], ["laktosefri-floede", 250], ["jasminris", 300]]),
+  recipe("lam", "lam", [["lammekoteletter", 600], ["kartofler", 1000], ["dild", 1]]),
+  recipe("mørbrad", "svin", [["svinemoerbrad", 600], ["madlavningsfloede", 250], ["jasminris", 300]]),
   recipe("shakshuka", "vegetar", [["aeg", 8], ["hakkede-tomater", 800], ["peberfrugt", 2]]),
-  recipe("torsk", "fisk", [["torsk", 600], ["kartofler", 1000], ["persille", 1]]),
+  recipe("kalkun", "kalkun", [["kalkunbryst", 600], ["kartofler", 1000], ["persille", 1]]),
 ];
 
 const KYLLING = ["kyllingebryst", "kyllingeoverlaar", "kyllingelaar", "hakket-kylling"];
@@ -59,8 +59,8 @@ test("samme protein lægges ikke to dage i træk, hvis det kan undgås", () => {
 });
 
 test("filtre på protein og tid respekteres", () => {
-  const plan = planWeek({ days: 3, people: 2, use: [], seed: 3, proteins: ["fisk", "vegetar"] }, LIBRARY);
-  assert.ok(plan.recipes.every((r) => r.protein === "fisk" || r.protein === "vegetar"));
+  const plan = planWeek({ days: 3, people: 2, use: [], seed: 3, proteins: ["lam", "vegetar"] }, LIBRARY);
+  assert.ok(plan.recipes.every((r) => r.protein === "lam" || r.protein === "vegetar"));
 });
 
 test("byt en dag giver en ret der ikke allerede er i planen", () => {

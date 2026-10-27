@@ -1,6 +1,6 @@
 import type { Recipe } from "../types.ts";
 import { RECIPES as kylling } from "./kylling.ts";
 import { RECIPES as koed } from "./koed.ts";
-import { RECIPES as fiskVegetar } from "./fisk-vegetar.ts";
+import { RECIPES as vegetar } from "./vegetar.ts";
 
-export const RECIPES: Recipe[] = [...kylling, ...koed, ...fiskVegetar];
+export const RECIPES: Recipe[] = [...kylling, ...koed, ...vegetar];

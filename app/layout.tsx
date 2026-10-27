@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Madplan",
-  description: "Lav-FODMAP madplan og indkøbsliste",
+  description: "Madplan og indkøbsliste uden fruktaner",
   appleWebApp: { capable: true, title: "Madplan", statusBarStyle: "default" },
   icons: { icon: "/icon.svg", apple: "/apple-touch-icon.png" },
 };

@@ -26,11 +26,11 @@ const GROUPS: UseOption[] = [
     pack: { size: 500, label: "bakke" },
   },
   {
-    key: "gruppe:hvid-fisk",
-    label: "Hvid fisk (torsk, sej eller rødspætte)",
-    ids: ["torsk", "sej", "roedspaette"],
+    key: "gruppe:loeg",
+    label: "Løg (gule eller røde)",
+    ids: ["loeg", "roedloeg"],
     unit: "g",
-    pack: { size: 400, label: "pakke" },
+    pack: { size: 1000, label: "net" },
   },
   {
     key: "gruppe:ris",

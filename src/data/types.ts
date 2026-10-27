@@ -21,7 +21,7 @@ export type Ingredient = {
   pantry?: boolean;
 };
 
-export type Protein = "kylling" | "kalkun" | "okse" | "svin" | "lam" | "fisk" | "skaldyr" | "vegetar";
+export type Protein = "kylling" | "kalkun" | "okse" | "svin" | "lam" | "vegetar";
 
 export const TAGS = [
   "hurtig", "ovnret", "gryderet", "suppe", "pasta", "ris", "wok", "salat", "tacos", "burger",
