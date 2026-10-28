@@ -183,6 +183,15 @@ export function Setup({ initial, onSubmit }: { initial: Settings; onSubmit: (s: 
             </button>
           ))}
         </div>
+        <h2>Opskrifter</h2>
+        <div className="chips">
+          <button type="button" aria-pressed={!settings.onlyMine} onClick={() => set({ onlyMine: false })}>
+            Alle
+          </button>
+          <button type="button" aria-pressed={Boolean(settings.onlyMine)} onClick={() => set({ onlyMine: true })}>
+            Kun mine ({RECIPES.filter((r) => r.mine).length})
+          </button>
+        </div>
         <h2>Tid</h2>
         <div className="chips">
           {TIMES.map((t) => (

@@ -2,36 +2,6 @@ import type { Recipe } from "../types.ts";
 
 export const RECIPES: Recipe[] = [
   {
-    id: "shakshuka-med-peberfrugt-og-feta",
-    title: "Shakshuka med peberfrugt, kikærter og feta",
-    servings: 4,
-    minutes: 30,
-    protein: "vegetar",
-    tags: ["hurtig"],
-    ingredients: [
-      { id: "aeg", amount: 8 },
-      { id: "hakkede-tomater", amount: 800 },
-      { id: "kikaerter", amount: 240 },
-      { id: "peberfrugt", amount: 2 },
-      { id: "hvidloegsolie", amount: 2 },
-      { id: "spidskommen", amount: 1 },
-      { id: "roeget-paprika", amount: 1 },
-      { id: "chiliflager", amount: 0.5 },
-      { id: "feta", amount: 150 },
-      { id: "koriander", amount: 1 },
-      { id: "majstortillas", amount: 8 },
-      { id: "salt", amount: 1 },
-    ],
-    steps: [
-      "Steg peberfrugt i strimler i hvidløgsolie i en bred pande i 5 minutter.",
-      "Tilsæt spidskommen, røget paprika og chiliflager, og derefter hakkede tomater og skyllede kikærter.",
-      "Lad saucen simre i 10 minutter og smag til med salt.",
-      "Lav otte fordybninger i saucen, slå æggene ud i dem og læg låg på. Lad æggene stivne i 6-8 minutter.",
-      "Smuldr feta og drys koriander over.",
-      "Varm majstortillas på en tør pande og server dem til.",
-    ],
-  },
-  {
     id: "tofu-wok-med-edamame-og-pak-choi",
     title: "Tofuwok med edamame, champignon, pak choi og ris",
     servings: 4,

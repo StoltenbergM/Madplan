@@ -349,6 +349,7 @@ export const RULES: FodmapRule[] = [
   { id: "figner", name: "Figner", aliases: ["figner", "figen"], status: "high", types: ["fructan"] },
   { id: "svesker", name: "Svesker", aliases: ["svesker"], status: "high", types: ["fructan", "polyol"] },
   { id: "rosiner", name: "Rosiner", aliases: ["rosiner"], status: "limit", types: ["fructan"] },
+  { id: "granataeble", name: "Granatæble", aliases: ["granatæble"], status: "limit", types: ["fructan"] },
   { id: "grapefrugt", name: "Grapefrugt", aliases: ["grapefrugt"], status: "limit", types: ["fructan"] },
   { id: "kaki", name: "Kaki / persimmon", aliases: ["kaki", "persimmon", "sharonfrugt"], status: "high", types: ["fructan"] },
   {
@@ -454,7 +455,7 @@ export const RULES: FodmapRule[] = [
   low("fisk", "Fisk og skaldyr", ["laks", "torsk", "sej", "rødspætte", "makrel", "tun", "rejer", "muslinger", "sild", "fisk", "kuller", "ørred"]),
   low("aeg", "Æg", ["æg"]),
   low("tofu", "Fast tofu", ["tofu", "fast tofu", "tempeh"]),
-  low("ris", "Ris og glutenfrie kornsorter", ["ris", "basmatiris", "jasminris", "quinoa", "hirse", "boghvede", "polenta", "rismel", "majsstivelse", "maizena", "majsmel", "kartoffelmel", "popcorn", "rispapir", "rismælk", "risdrik", "majstortilla"]),
+  low("ris", "Ris og glutenfrie kornsorter", ["ris", "basmatiris", "jasminris", "quinoa", "hirse", "boghvede", "polenta", "rismel", "majsstivelse", "maizena", "majsmel", "kartoffelmel", "popcorn", "rispapir", "rismælk", "risdrik", "majstortilla", "glutenfri melblanding"]),
   low("kartofler", "Kartofler", ["kartofler", "kartoffel"]),
   low("groent", "Lav-FODMAP grøntsager", [
     "gulerod", "gulerødder", "agurk", "tomat", "peberfrugt", "squash", "aubergine", "spinat", "salat",

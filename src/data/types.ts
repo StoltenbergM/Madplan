@@ -46,4 +46,8 @@ export type Recipe = {
   tags: Tag[];
   ingredients: RecipeIngredient[];
   steps: string[];
+  /** Hvor opskriften kommer fra, fx "juliebruun.com". */
+  source?: string;
+  /** Fra brugerens egen opskriftssamling. */
+  mine?: boolean;
 };

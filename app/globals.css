@@ -519,6 +519,12 @@ button {
   color: var(--offer);
 }
 
+.badge.mine {
+  margin: 0 6px 0 0;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
 .badge.check {
   background: var(--check-soft);
   color: var(--check);

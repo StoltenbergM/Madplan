@@ -104,3 +104,9 @@ test("formatering af mængder", () => {
   assert.equal(packsNeeded(410, 400), 1);
   assert.equal(packsNeeded(500, 400), 2);
 });
+
+test("kun mine opskrifter", () => {
+  const mine = { ...LIBRARY[4], id: "min-ret", mine: true };
+  const plan = planWeek({ days: 3, people: 2, use: [], seed: 5, onlyMine: true }, [...LIBRARY, mine]);
+  assert.ok(plan.recipes.length === 3 && plan.recipes.every((r) => r.id === "min-ret"));
+});

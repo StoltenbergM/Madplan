@@ -33,6 +33,7 @@ function RecipeDetails({ recipe, people }: { recipe: Recipe; people: number }) {
           <li key={i}>{step}</li>
         ))}
       </ol>
+      {recipe.source && <p className="muted small">Opskrift fra {recipe.source}, tilpasset uden fruktaner.</p>}
       {people !== recipe.servings && (
         <p className="muted small">Mængderne er omregnet fra en opskrift til {recipe.servings} personer.</p>
       )}
@@ -118,6 +119,7 @@ export function PlanView(props: {
               <p className="day-label">{dayLabel(startDate, day)}</p>
               <h2 className="day-title">{recipe.title}</h2>
               <p className="muted small">
+                {recipe.mine && <span className="badge mine">Min opskrift</span>}
                 {recipe.minutes} min · {PROTEIN_LABEL[recipe.protein]}
                 {recipe.tags.length > 0 && ` · ${recipe.tags.join(", ")}`}
               </p>

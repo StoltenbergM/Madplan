@@ -16,6 +16,8 @@ export type PlanRequest = {
   seed: number;
   proteins?: Protein[];
   maxMinutes?: number;
+  /** Kun opskrifter fra brugerens egen samling. */
+  onlyMine?: boolean;
   /** Opskrifter der ikke må vælges (fx den man lige har byttet væk). */
   exclude?: string[];
 };
@@ -56,6 +58,7 @@ function candidates(req: PlanRequest, recipes: Recipe[]): Recipe[] {
     (r) =>
       (!req.proteins?.length || req.proteins.includes(r.protein)) &&
       (!req.maxMinutes || r.minutes <= req.maxMinutes) &&
+      (!req.onlyMine || r.mine) &&
       !req.exclude?.includes(r.id),
   );
 }

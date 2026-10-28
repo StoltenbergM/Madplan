@@ -20,6 +20,7 @@ export type Settings = {
   use: UseEntry[];
   proteins: Protein[];
   maxMinutes: number | null;
+  onlyMine?: boolean;
 };
 
 export type Saved = {
@@ -66,6 +67,7 @@ export function toRequest(settings: Settings, seed: number): PlanRequest {
     seed,
     proteins: settings.proteins,
     maxMinutes: settings.maxMinutes ?? undefined,
+    onlyMine: settings.onlyMine,
   };
 }
 

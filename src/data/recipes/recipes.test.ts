@@ -12,7 +12,7 @@ test("opskrifternes id'er er unikke", () => {
 
 for (const recipe of RECIPES) {
   test(`opskrift: ${recipe.title}`, () => {
-    assert.equal(recipe.servings, 4, "alle opskrifter skrives til 4 personer");
+    assert.ok(recipe.servings >= 1 && recipe.servings <= 8, "servings");
     assert.ok(recipe.minutes >= 5 && recipe.minutes <= 180, "minutes");
     assert.ok(recipe.steps.length >= 2, "mindst to trin");
     for (const tag of recipe.tags) assert.ok((TAGS as readonly string[]).includes(tag), `ukendt tag ${tag}`);
